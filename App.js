@@ -53,7 +53,7 @@ class UI {
         
         <div class="data" >
            
-                <h2 class="card-title"> ${data.name}</h2>
+                <h2 class="card-title"> ${data.name} ( ${data.sys.country} )</h2>
 
                 <h3 class="card-subtitle">Highest Temperature : ${data.main.temp_max}&#8451. <br> Lowest Temperature : ${data.main.temp_min}&#8451</h3>
                 <br>
