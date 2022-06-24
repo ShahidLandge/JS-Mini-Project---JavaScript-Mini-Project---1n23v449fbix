@@ -1,11 +1,11 @@
 //Fetching weather API
 class Fetch {
   async getCurrent(input) {
-    const myKey = "39a9a737b07b4b703e3d1cd1e231eedc";
+    const myKey =  "073ddcdfb43f7376762aa1c5229a06f0";
 
     //make request to url
-
-    const response = await fetch(
+try{
+    const response =  await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q= ${input}&appid=${myKey}&units=metric `
 
     );
@@ -14,8 +14,28 @@ class Fetch {
 
     console.log(data);
 
-    return data;
+     if(data.name==null){
+    console.log("Data not found");
+    console.log("Data.name" +data.name);
+    data.name = null;
+
+    alert("Please enter a valid city ");
+
+      }
+  
+    
+      else{
+        return data;
+      }
+    
+   
+}
+
+catch(err){
+  console.log("invalid city" +err);
+ 
   }
+}
 }
 
 
@@ -33,7 +53,7 @@ class UI {
         
         <div class="data" >
            
-                <h2 class="card-title">${data.name}</h2>
+                <h2 class="card-title"> ${data.name}</h2>
 
                 <h3 class="card-subtitle">Highest Temperature : ${data.main.temp_max}&#8451. <br> Lowest Temperature : ${data.main.temp_min}&#8451</h3>
                 <br>
@@ -43,7 +63,8 @@ class UI {
 
                 <div>
 
-                <span class="close"  onclick="myFunction()">&times;</span>
+                <span class="close"  onclick="closeFunction()">&times;</span>
+            
 
 
                 </div>
@@ -58,12 +79,19 @@ class UI {
 }
 
 
-function myFunction() {
+function closeFunction() {
   var x = document.getElementById("content");
 
   x.style.display = "none";
 
 }
+function openFunction(data) {
+  var x = document.getElementById("content");
+
+  x.style.display = "block";
+
+}
+ 
 
 
 
@@ -79,6 +107,8 @@ const search = document.getElementById("searchUser");
 const button = document.getElementById("submit");
 button.addEventListener("click", () => {
   const currentVal = search.value;
+
+  openFunction();
 
   ft.getCurrent(currentVal).then((data) => {
     //call a UI method//
