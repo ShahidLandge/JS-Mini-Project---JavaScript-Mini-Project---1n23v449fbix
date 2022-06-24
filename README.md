@@ -3,7 +3,7 @@
 ##	Project Description :
  This is a basic weather app which is made using HTML, CSS and Javascript.In this app i have used the weather API from OpenWeatherMap.org which fetches the real time weather information of the city serched by the user. 
 
-# Why this project was chosen (what use case does it solve) ?
+## Why this project was chosen (what use case does it solve) ?
 It helps to understand the core basics of the DOM and teaches how to use fetch API, to call and get data from a third-party service.
 
 
