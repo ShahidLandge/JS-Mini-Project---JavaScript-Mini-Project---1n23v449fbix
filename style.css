@@ -1,180 +1,180 @@
 * {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-image: url('weather.jpg');
-  width: 100%;
-  height: 100%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
-
-
-}
-
-.title {
-
-
-  text-align: center;
-  background-color: #2196f3;
-  padding: 20px;
-  color: white;
-
-
-}
-
-.container {
-  width: 500px;
-  height: 200px;
-  background-color: skyblue;
-  position: absolute;
-  top: -20%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-
-  text-align: center;
-  border: 5px solid #9AD3DE;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px 0px rgba(#000000, 0.4);
-
-}
-
-
-.data {
-  width: 320px;
-  height: 100px;
-  background-color: skyblue;
-  position: absolute;
-  top: 60%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-
-  text-align: center;
-  border: 5px solid #9AD3DE;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px 0px rgba(#000000, 0.4);
-
-}
-
-
-
-#searchUser {
-  padding: 10px;
-  margin: 5px;
-  border-radius: 5px;
-}
-
-
-
-.button {
-  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
-  border: 0;
-  border-radius: 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 2.5;
-  outline: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-}
-
-.button:not([disabled]):focus {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.button:not([disabled]):hover {
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-}
-
-.close {
-  position: absolute;
-  top: 0px;
-  right: 10px;
-  transition: all 200ms;
-  font-size: 40px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
-}
-
-.close:hover {
-  color: #06D85F;
-}
-
-
-footer {
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  background-color: green;
-  opacity: 0.8;
-  padding: 10px;
-
-}
-
-
-
-.copyright {
-  text-align: center;
-
-  font-weight: 500;
-  font-size: 16px;
-  color: white;
-  font-weight: bold;
-
-
-}
-
-@media screen and (max-width: 600px) {
-
-  .title {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-image: url('weather.jpg');
     width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  
+  
+  
   }
-
-  #get {
-    font-size: 20px;
+  
+  .title {
+  
+  
+    text-align: center;
+    background-color: #2196f3;
+    padding: 20px;
+    color: white;
+  
+  
   }
-
+  
   .container {
-    width: 60%;
+    width: 500px;
+    height: 200px;
+    background-color: skyblue;
+    position: absolute;
+    top: -20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  
+    text-align: center;
+    border: 5px solid #9AD3DE;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(#000000, 0.4);
+  
   }
-
+  
+  
   .data {
-    width: 60%;
+    width: 320px;
+    height: 120px;
+    background-color: skyblue;
+    position: absolute;
+    top: 60%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  
+    text-align: center;
+    border: 5px solid #9AD3DE;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(#000000, 0.4);
+  
   }
-
-  #content {
-    font-size: 12px;
+  
+  
+  
+  #searchUser {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
   }
-
-
-
-}
+  
+  
+  
+  .button {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  
+  .button:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+  .button:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+  .close {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .close:hover {
+    color: #06D85F;
+  }
+  
+  
+  footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    background-color: green;
+    opacity: 0.8;
+    padding: 10px;
+  
+  }
+  
+  
+  
+  .copyright {
+    text-align: center;
+  
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  
+  
+  }
+  
+  @media screen and (max-width: 600px) {
+  
+    .title {
+      width: 100%;
+    }
+  
+    #get {
+      font-size: 20px;
+    }
+  
+    .container {
+      width: 60%;
+    }
+  
+    .data {
+      width: 60%;
+    }
+  
+    #content {
+      font-size: 12px;
+    }
+  
+  
+  
+  }

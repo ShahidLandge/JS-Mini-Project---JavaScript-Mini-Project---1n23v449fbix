@@ -1,56 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weather App</title>
-  <link rel="stylesheet" href="style.css">
-
-
-</head>
-
-
-<body>
-
-  <div class="title">
-    <h1>Weather Search</h1>
-  </div>
-
-  <div class="container">
-
-
-
-    <h1 id="get">Get The Weather For a Location</h1>
-    <br>
-    <br>
-
-
-    <div>
-      Enter Your Location <br><input type="text" id="searchUser" placeholder="Location">
-    </div>
-    <br>
-    <br>
-
-    <div>
-      <button class="button" id="submit">Submit</button>
+  <body>
+    <div class="title">
+      <h1>Weather Search</h1>
     </div>
 
+    <div class="container">
+      <h1 id="get">Get The Weather For a Location</h1>
+      <br />
+      <br />
 
+      <div>
+        Enter Your Location <br /><input
+          type="text"
+          id="searchUser"
+          placeholder="Location"
+        />
+      </div>
+      <br />
+      <br />
 
-    <br>
-  </div>
-  <div id="content">
+      <div>
+        <button class="button" id="submit">Submit</button>
+      </div>
 
-  </div>
-  <div class="copyright">
-    <footer>Copyright &copy;2022, The Weather Search. All Rights Reserved.</footer>
-  </div>
+      <br />
+    </div>
+    <div id="content"></div>
+    <div class="copyright">
+      <footer>
+        Copyright &copy;2022, The Weather Search. All Rights Reserved.
+      </footer>
+    </div>
+  </body>
 
-
-</body>
-
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </html>
