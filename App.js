@@ -13,12 +13,20 @@ class Fetch {
 
       console.log(data);
 
-      if (data.message == 'city not found') {
-       
-        console.log( data.message);
+      if (data.message == "city not found") {
+        console.log(data.message);
         var x = document.getElementById("content");
-        x.style.display = "none";
-       alert("Please enter a valid city ");
+
+        x.innerHTML = `
+        
+       <div class="valid" >
+          
+               <h3>Please Enter a Valid City</h3>
+             
+       </div>
+       
+       
+       `;
       } else {
         return data;
       }
@@ -34,15 +42,16 @@ class UI {
   }
 
   populateUI(data) {
-  
     this.uiContainer.innerHTML = `
         
         <div class="data" >
            
-                <h2 class="card-title"> ${data.name} ( ${data.sys.country} )</h2>
-                <h3 class="card-subtitle">Temperature : ${data.main.temp}&#8451. <br> Wind Speed : ${data.wind.speed} m/h  <br> Pressure : ${data.main.pressure} hPa</h3>
+                <h2 > ${data.name} ( ${data.sys.country} )</h2>
+                <h3>Temperature : ${data.main.temp}&#8451. <br> Wind Speed : ${data.wind.speed} m/h  <br> Pressure : ${data.main.pressure} hPa</h3>
                 <br>
-                <h3 class="card-text ">Weather conditions are described as: ${data.weather[0].description}</h3>
+                <h3 >Weather conditions are described as: ${data.weather[0].description} 
+                <img src="icons/${data.weather[0].icon}.png" alt="image 1" width= "20px" />  
+                </h3>
                 <br>
                 <div>
                 <span class="close"  onclick="closeFunction()">&times;</span>
@@ -60,37 +69,28 @@ class UI {
 const ft = new Fetch();
 const ui = new UI();
 
-
 //add event listeners//
 const search = document.getElementById("searchUser");
 const button = document.getElementById("submit");
 
 button.addEventListener("click", () => {
   const currentVal = search.value;
-  
-  
+
   ft.getCurrent(currentVal).then((data) => {
     //show only if name is valid
-    if(data.name!=undefined){
-       var x = document.getElementById("content");
-       x.style.display = "block";
-       console.log(data.name)
-       //call a UI method//
-       ui.populateUI(data);
-      }
-  
+    if (data.name != undefined) {
+      var x = document.getElementById("content");
+      x.style.display = "block";
+      console.log(data.name);
+      //call a UI method//
+      ui.populateUI(data);
+    }
   });
-
-   
-
 });
 
-
-//Toggling Function
+//Close Function
 function closeFunction() {
   var x = document.getElementById("content");
 
   x.style.display = "none";
 }
-
-
