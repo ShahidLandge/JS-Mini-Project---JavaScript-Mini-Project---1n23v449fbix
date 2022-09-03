@@ -13,20 +13,17 @@ class Fetch {
 
       console.log(data);
 
-      if (data.message == "city not found") {
+      if (data.message === "city not found") {
         console.log(data.message);
         var x = document.getElementById("content");
+        x.style.display = "block";
 
         x.innerHTML = `
         
-       <div class="valid" >
-          
-               <h3>Please Enter a Valid City</h3>
-             
-       </div>
-       
-       
-       `;
+        <div class="card  bg-info mb-3 container d-flex justify-content-center" style="width: 18rem">
+        <h5 class='text-align-center m-3'>Please Enter a Valid City</h5>
+        </div>  `;
+        return;
       } else {
         return data;
       }
@@ -44,24 +41,30 @@ class UI {
   populateUI(data) {
     this.uiContainer.innerHTML = `
         
-        <div class="data" >
-           
-                <h2 > ${data.name} ( ${data.sys.country} )</h2>
-                <h3>Temperature : ${data.main.temp}&#8451. <br> Wind Speed : ${data.wind.speed} m/h  <br> Pressure : ${data.main.pressure} hPa</h3>
-                <br>
-                <h3 >Weather conditions are described as: ${data.weather[0].description} 
-                <img src="icons/${data.weather[0].icon}.png" alt="image 1" width= "20px" />  
-                </h3>
-                <br>
-                <div>
-                <span class="close"  onclick="closeFunction()">&times;</span>
-            
-                </div>
-            </div>
-        </div>
+ 
+  <div class="card  bg-info mb-3 container d-flex justify-content-center align-items-center" style="width: 18rem;">
+  <div class="card-body container d-flex flex-column justify-content-center align-items-center">
+  <div>
+    <h5 class="card-title ">${data.name} ( ${data.sys.country} )</h5>
+  </div>
+
+  <div>
+    <h6 class="card-subtitle mb-2 ">Temperature : ${data.main.temp}&#8451. <br> Wind Speed : ${data.wind.speed} m/h  <br> Pressure : ${data.main.pressure} hPa 
+    <br>Min-Temp : ${data.main.temp_min}&#8451
+    <br>Max-Temp : ${data.main.temp_max}&#8451
+    </h6>
+   <br>
+    <h6 class="card-subtitle mb-2 ">Weather conditions are described as: ${data.weather[0].description}
+   
+  
+    <img src="icons/${data.weather[0].icon}.png" alt="image 1" width= "20px" /> </h6>
+    </div>
+    <p class="card-text"> <span class="close"  onclick="closeFunction()">&times;</span></p>
+  
+  </div>
+</div>
         
-        
-        `;
+  `;
   }
 }
 
@@ -77,8 +80,9 @@ button.addEventListener("click", () => {
   const currentVal = search.value;
 
   ft.getCurrent(currentVal).then((data) => {
+    console.log(data);
     //show only if name is valid
-    if (data.name != undefined) {
+    if (data.name !== undefined) {
       var x = document.getElementById("content");
       x.style.display = "block";
       console.log(data.name);
