@@ -50,7 +50,7 @@ class UI {
                 <h3>Temperature : ${data.main.temp}&#8451. <br> Wind Speed : ${data.wind.speed} m/h  <br> Pressure : ${data.main.pressure} hPa</h3>
                 <br>
                 <h3 >Weather conditions are described as: ${data.weather[0].description} 
-
+                <img src="icons/${data.weather[0].icon}.png" alt="image 1" width= "20px" />  
                 </h3>
                 <br>
                 <div>
